@@ -1,6 +1,9 @@
 package com.gl.gp4.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -15,8 +18,12 @@ public class User {
     @Column(name = "first_name", nullable = false)
 	private String userName;
     
+    @Column(name = "password")
 	private String password;
 
     @Column(name = "email")
 	private String email;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
 }

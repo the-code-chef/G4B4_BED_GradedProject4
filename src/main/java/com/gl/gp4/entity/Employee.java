@@ -1,12 +1,15 @@
 package com.gl.gp4.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "employees")
 public class Employee {
     
     @Id
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
