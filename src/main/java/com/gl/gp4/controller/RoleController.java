@@ -1,7 +1,7 @@
 package com.gl.gp4.controller;
 
 import com.gl.gp4.entity.Role;
-import com.gl.gp4.service.role.RoleServiceImpl;
+import com.gl.gp4.service.role.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/roles")
 public class RoleController {
-    private final RoleServiceImpl roleService;
+    private final RoleService roleService;
 
     @Autowired
-    public RoleController(RoleServiceImpl roleService) {
+    public RoleController(RoleService roleService) {
         this.roleService = roleService;
     }
 

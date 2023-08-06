@@ -1,7 +1,8 @@
 package com.gl.gp4.controller;
 
 import com.gl.gp4.entity.Employee;
-import com.gl.gp4.service.employee.EmployeeServiceImpl;
+import com.gl.gp4.service.employee.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +13,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeController {
-    private final EmployeeServiceImpl employeeService;
+    private final EmployeeService employeeService;
 
-    public EmployeeController(EmployeeServiceImpl employeeService) {
+    @Autowired
+    public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 

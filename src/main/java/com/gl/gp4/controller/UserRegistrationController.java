@@ -2,7 +2,8 @@ package com.gl.gp4.controller;
 
 
 import com.gl.gp4.entity.User;
-import com.gl.gp4.service.user.UserServiceImpl;
+import com.gl.gp4.service.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,9 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/users")
 public class UserRegistrationController {
-    private final UserServiceImpl userService;
+    private final UserService userService;
 
-    public UserRegistrationController(UserServiceImpl userService) {
+    @Autowired
+    public UserRegistrationController(UserService userService) {
         this.userService = userService;
     }
 
