@@ -4,6 +4,7 @@ import com.gl.gp4.entity.Role;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public interface RoleService {
@@ -12,7 +13,7 @@ public interface RoleService {
     
     List<Role> getAllRoles();
     
-    Role getRoleById(Long id);
+    Optional<Role> getRoleById(Long id);
     
     Role getRoleByName(String roleName);
     

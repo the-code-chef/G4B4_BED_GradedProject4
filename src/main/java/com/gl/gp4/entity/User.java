@@ -2,9 +2,11 @@ package com.gl.gp4.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 @Data
 @Entity
 @Table(name = "users")
